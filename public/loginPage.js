@@ -9,15 +9,17 @@ loginForm.loginFormCallback = data => ApiConnector.login(data, (response) => {
         loginForm.setLoginErrorMessage(response.data);
     }
   })
+  
 
 loginForm.registerFormCallback = data => ApiConnector.register(data, (response) => {
     console.log(response);
     if (response.success) {
         location.reload();
     } else {
-        loginForm.setLoginErrorMessage(response.data);
+        loginForm.setRegisterErrorMessage(response.data);
     }
   })
+  
 
   
 
